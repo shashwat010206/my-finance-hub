@@ -1,0 +1,305 @@
+/* RESET + BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f5f9ff;  /* light pastel blue */
+  color: #333; /* readable grey */
+}
+
+/* HEADER */
+.app-header {
+  text-align: center;
+  padding: 1.8rem 1rem;
+  background-color: #e8f1ff;
+  border-bottom: 2px solid #d0e2ff;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+  color: #2e4a7d;
+}
+
+.app-header p {
+  color: #5b6b85;
+}
+
+/* PAGE CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* MEME + QUOTE SECTION */
+.meme-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.meme-box,
+.quote-box {
+  background-color: #ffffff;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  border: 1px solid #d0e2ff;
+}
+
+.meme-box img {
+  width: 100%;
+  border-radius: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.meme-box p {
+  text-align: center;
+  color: #697a94;
+  font-size: 0.9rem;
+}
+
+.quote-box h2 {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  color: #2e4a7d;
+}
+
+.quote-box p {
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+/* SUMMARY CARDS */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 0.7rem;
+  border: 1px solid #d0e2ff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card h2 {
+  color: #5b6b85;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.card.income p {
+  color: #2ea44f; /* green */
+}
+
+.card.expense p {
+  color: #e63946; /* soft red */
+}
+
+.tag-neutral,
+.tag-positive,
+.tag-negative {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+}
+
+.tag-neutral {
+  background-color: #e8eaf2;
+  color: #333;
+}
+
+.tag-positive {
+  background-color: #dbf4e4;
+  color: #1b6b39;
+}
+
+.tag-negative {
+  background-color: #fde2e2;
+  color: #b13030;
+}
+
+/* FILTERS & ACTIONS */
+.controls-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filter-group,
+.actions-group {
+  background-color: #ffffff;
+  border-radius: 0.7rem;
+  border: 1px solid #d0e2ff;
+  padding: 1rem;
+}
+
+h2 {
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+  color: #2e4a7d;
+}
+
+/* INPUTS & BUTTONS */
+input,
+select {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid #b8c9e6;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+input:focus,
+select:focus {
+  border-color: #6ea7ff;
+  outline: none;
+}
+
+.btn {
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: #6ea7ff;
+  color: white;
+  font-weight: 600;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-secondary {
+  background-color: #b7c9e6;
+  color: #2e4a7d;
+}
+
+.btn-danger {
+  background-color: #e63946;
+}
+
+.btn-outline {
+  background-color: white;
+  border: 1px solid #6ea7ff;
+  color: #2e4a7d;
+}
+
+/* FORM */
+.form-section {
+  background-color: #ffffff;
+  border: 1px solid #d0e2ff;
+  border-radius: 0.7rem;
+  padding: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+#transaction-form {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* TABLE */
+.list-section {
+  background-color: #ffffff;
+  border: 1px solid #d0e2ff;
+  border-radius: 0.7rem;
+  padding: 1rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.6rem;
+}
+
+th, td {
+  padding: 0.6rem;
+  border-bottom: 1px solid #e1e9f8;
+}
+
+th {
+  font-size: 0.85rem;
+  color: #5b6b85;
+  text-transform: uppercase;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.action-btn {
+  border: 1px solid #6ea7ff;
+  background-color: white;
+  color: #2e4a7d;
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.4rem;
+  font-size: 0.75rem;
+}
+
+.edit {
+  border-color: #3b82f6;
+}
+
+.delete {
+  border-color: #e63946;
+}
+
+/* FOOTER */
+.app-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #5b6b85;
+}
+
+/* RESPONSIVE */
+@media(max-width: 800px) {
+  .meme-section,
+  .controls-section,
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  #transaction-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
